@@ -14,131 +14,133 @@
   
   <!-- Custom Styles -->
   <style>
-    body {
-      background-color: silver;
-      color: white;
-    }
-    
-    .parallax {
-      background-image: url("1894518.gif");
-      min-height: 500px;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: -1;
-    }
-    
-    .content {
-      position: relative;
-      color: #fff;
-      text-align: left;
-      padding: 100px 0;
-      margin-left: 20px;
-      z-index: 1;
-    }
-    
-    .parallax-container {
-      min-height: 500px;
-      overflow: hidden;
-      position: relative;
-    }
-    
-    .circle-image img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    
-    .typing-text {
-      font-size: 24px;
-      font-weight: bold;
-      border-right: 2px solid black;
-      display: inline;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-    
-    section {
-      padding: 20px;
-      text-align: center;
-    }
-    
-    footer {
-      font-family: Corbel;
-      background-color: #333;
-      color: #fff;
-      padding: 10px 0;
-      text-align: center;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-    
-    .end {
-      background-color: black;
-      border: 2px solid white;
-      padding: 10px 10px;
-    }
-    
-    .end h1 {
-      color: white;
-      font-family: Times New Roman;
-      font-size: 20px;
-      text-align: center;
-    }
-    
-    .end table {
-      width: 100%;
-      border: 2px solid black;
-      color: white;
-      text-align: center;
-    }
-    
-    .text {
-      color: darkred;
-      animation: c_change 9s infinite linear;
-    }
-    
-    .bcahnge {
-      border-color: black;
-      animation: b_change 9s infinite linear;
-    }
-    
-    @keyframes c_change {
-      0% { color: darkgreen; }
-      20% { color: red; }
-      60% { color: violet; }
-      100% { color: darkgreen; }
-    }
-    
-    @keyframes b_change {
-      0% { border-color: darkblack; }
-      20% { border-color: darkgreen; }
-      40% { border-color: purple; }
-      60% { border-color: violet; }
-      80% { border-color: darkblue; }
-      100% { border-color: darkblack; }
-    }
-    
-    button {
-      border-radius: 1px 25px;
-    }
-    
-    a {
-      text-decoration: none;
-      color: blue;
-    }
-    
-    button:hover {
-      background-color: darkgreen;
-    }
-  </style>
+<style>
+  body {
+    background-color: #0a0a0a; /* deep black */
+    color: #e0e0e0; /* soft white for readability */
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .parallax {
+    background-image: url("1894518.gif");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    filter: brightness(0.5); /* dim bg for better text contrast */
+  }
+
+  .content {
+    position: relative;
+    text-align: left;
+    padding: 100px 0;
+    margin-left: 20px;
+    z-index: 1;
+    color: #e0e0e0; /* normal readable text */
+  }
+
+  .circle-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 12px #39FF14; /* soft glow */
+  }
+
+  .typing-text {
+    font-size: 26px;
+    font-weight: bold;
+    border-right: 2px solid #39FF14;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #39FF14;
+    text-shadow: 0 0 6px #39FF14, 0 0 12px #00FF66; /* moderate glow */
+  }
+
+  section {
+    padding: 20px;
+    text-align: center;
+    color: #e0e0e0;
+  }
+
+  footer {
+    font-family: Corbel;
+    background-color: #111;
+    color: #e0e0e0;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #39FF14;
+    box-shadow: 0 -2px 8px #39FF14; /* subtle neon top border */
+  }
+
+  .end {
+    background-color: #000;
+    border: 2px solid #39FF14;
+    padding: 15px 10px;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.6); /* softer glow */
+  }
+
+  .end h1 {
+    color: #39FF14;
+    font-family: "Orbitron", sans-serif;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.7);
+  }
+
+  .end table {
+    width: 100%;
+    border: 2px solid #39FF14;
+    color: #e0e0e0;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(57, 255, 20, 0.5);
+  }
+
+  .text {
+    color: #e0e0e0; /* keep text normal */
+  }
+
+  .bcahnge {
+    border: 2px solid #39FF14;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.6);
+  }
+
+  button {
+    border-radius: 1px 25px;
+    background: #000;
+    color: #39FF14;
+    border: 2px solid #39FF14;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 6px rgba(57, 255, 20, 0.6);
+  }
+
+  button:hover {
+    background-color: #39FF14;
+    color: black;
+    box-shadow: 0 0 15px #39FF14, 0 0 25px #00FF66;
+  }
+
+  a {
+    text-decoration: none;
+    color: #39FF14;
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.7);
+  }
+</style>
+
+
 </head>
 <body>
   
@@ -279,9 +281,9 @@
           <td style="width: 50%;">
             <h1>CONTACT US:</h1>
             <p>Contact us for any help or more information<br>
-              <b>Location:</b>----------------------------------<br><br>
-              <b>Email:</b> ----------------------------<br>
-              <b>Mobile No.:</b> --------------------
+              <b>Location:</b> virar east<br><br>
+              <b>Email:</b> vivekspkale0022@gmail.com<br>
+              <b>Mobile No.:</b> +91 9136822022<br>
             </p>
           </td>
           <td>
@@ -300,7 +302,7 @@
   
   <!-- Footer Section -->
   <footer>
-    <p>&copy; 2024 Version V website (Powered by Version V)</p>
+    <p>&copy; 2025 Version V website (Powered by Version V)</p>
   </footer>
   
   <!-- JavaScript -->
