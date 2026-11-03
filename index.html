@@ -1,285 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Self V</title>
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Custom CSS -->
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      color: #f1f1f1;
-      background: linear-gradient(135deg, #0d1117, #0b1736, #092d3c);
-      background-attachment: fixed;
-      scroll-behavior: smooth;
-    }
-
-    /* Navbar */
-    .navbar {
-      background: linear-gradient(90deg, #0d6efd, #0dcaf0);
-    }
-    .navbar-brand, .nav-link {
-      color: #fff !important;
-      font-weight: 500;
-    }
-    .nav-link:hover { color: #e3fcef !important; }
-
-    /* Parallax */
-    .parallax {
-      background-image: url("1894518.gif"); /* 🔹 your existing hero image */
-      min-height: 500px;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #fff;
-    }
-    .content h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      text-shadow: 0 0 12px rgba(0,0,0,0.6);
-    }
-    .typing-text {
-      font-size: 1.2rem;
-      color: #0dcaf0;
-      border-right: 2px solid #0dcaf0;
-      display: inline-block;
-      white-space: nowrap;
-      overflow: hidden;
-      margin-top: 10px;
-    }
-
-    /* Self Section (unchanged look, just cleaner) */
-    .card.self-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 15px;
-      backdrop-filter: blur(6px);
-      color: #e6e6e6;
-      text-align: center;
-      padding: 25px;
-      margin-top: -80px; /* lift it up a bit */
-    }
-    .circle-image img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #0dcaf0;
-      box-shadow: 0 0 15px rgba(13,202,240,0.6);
-    }
-    .btn-custom {
-      background: linear-gradient(90deg, #0d6efd, #0dcaf0);
-      border: none;
-      border-radius: 25px;
-      padding: 8px 20px;
-      color: white;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-    .btn-custom:hover {
-      background: linear-gradient(90deg, #0dcaf0, #20c997);
-      color: #0d1117;
-    }
-
-    /* Project Cards */
-    .glass-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      padding: 20px;
-      transition: transform .3s ease, box-shadow .3s ease;
-      backdrop-filter: blur(10px);
-      text-align: center;
-    }
-    .glass-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 25px rgba(13, 202, 240, 0.3);
-    }
-
-    /* Footer */
-    footer {
-      background: linear-gradient(90deg, #0b1736, #0d6efd, #20c997);
-      color: #f1f1f1;
-      padding: 25px 0;
-      text-align: center;
-    }
-    footer a {
-      color: #e3fcef;
-      margin: 0 10px;
-      font-size: 20px;
-      transition: 0.3s;
-    }
-    footer a:hover { color: #0dcaf0; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vivek Sapkale | AI/ML Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070b10;--panel:#0c131b;--line:#1b2733;--tx:#e8eef4;--mut:#8493a2;--ac:#2dd4a0;--big1:#f3f6f9;--big2:#9aa3ad;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme="dark"]){}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f5f7f6;--panel:#fff;--line:#d9e1e6;--tx:#0d1a24;--mut:#52616e;--ac:#0a8f68;--big1:#0b1620;--big2:#56636f;color-scheme:light}}
+:root[data-theme="light"]{--bg:#f5f7f6;--panel:#fff;--line:#d9e1e6;--tx:#0d1a24;--mut:#52616e;--ac:#0a8f68;--big1:#0b1620;--big2:#56636f;color-scheme:light}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;height:auto;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--tx);font:400 15px/1.7 'JetBrains Mono',ui-monospace,Menlo,monospace;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:calc(14px + env(safe-area-inset-top,0px)) 24px 14px;gap:12px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:49}
+.logo{font:700 24px 'JetBrains Mono';letter-spacing:-.05em}
+.pill{display:flex;gap:2px;padding:5px;border:1px solid var(--line);border-radius:99px;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(12px);overflow-x:auto;scrollbar-width:none;max-width:calc(100vw - 150px)}
+.pill a{padding:8px 16px;border-radius:99px;font-size:12px;letter-spacing:.14em;color:var(--mut);white-space:nowrap;transition:.25s}
+.pill a:hover{color:var(--tx)}
+.pill a.on{color:var(--tx);background:color-mix(in srgb,var(--ac) 14%,var(--panel));box-shadow:0 0 0 1.5px var(--ac)}
+.tools{display:flex;gap:10px;align-items:center;font-size:12px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--ac);display:inline-block;margin-right:8px;box-shadow:0 0 10px var(--ac)}
+.tbtn{border:1px solid var(--line);border-radius:99px;padding:6px 12px;font-size:12px;color:var(--mut)}
+.tbtn:hover{color:var(--tx);border-color:var(--ac)}
+/* hero */
+.hero{position:relative;min-height:100svh;padding:96px 24px 40px;display:flex}
+.frame{position:relative;flex:1;border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:26px 30px;max-width:1180px;margin:0 auto;width:100%}
+canvas{position:absolute;inset:0;width:100%;height:100%}
+.frame>*:not(canvas){position:relative;z-index:1}
+.row{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.18em;color:var(--mut);gap:12px;flex-wrap:wrap}
+.mid{text-align:center;padding:30px 0}
+.role{font-size:12px;letter-spacing:.38em;color:var(--mut);min-height:22px}
+.role i{display:inline-block;width:8px;height:14px;background:var(--ac);vertical-align:-2px;margin-left:4px;animation:bl 1s steps(2) infinite}
+@keyframes bl{50%{opacity:0}}
+h1{font:400 clamp(72px,17vw,250px)/.86 'Instrument Serif',serif;text-transform:uppercase;letter-spacing:-.01em;margin-top:14px}
+h1 span{display:block;transition:transform .2s}
+h1 .a{color:var(--big1)}
+h1 .b{background:linear-gradient(var(--big2),transparent 115%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{max-width:560px;margin:26px auto 0;color:var(--mut)}
+.cta{display:flex;gap:12px;justify-content:center;margin-top:24px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);border-radius:99px;padding:11px 22px;font-size:13px;transition:.25s}
+.btn.p{background:var(--ac);color:#04130e;border-color:var(--ac);font-weight:700}
+.btn:hover{border-color:var(--ac);transform:translateY(-2px)}
+.stats{display:flex;gap:34px;justify-content:center;flex-wrap:wrap}
+.stats b{display:block;font:400 34px/1 'Instrument Serif',serif;color:var(--tx)}
+.stats small{font-size:11px;color:var(--mut)}
+/* sections */
+section{padding:90px 0}
+h2{font:400 clamp(40px,6vw,72px)/1 'Instrument Serif',serif;margin-bottom:10px}
+.sub{color:var(--mut);margin-bottom:30px;max-width:620px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.chip{border:1px solid var(--line);border-radius:99px;padding:7px 16px;font-size:12px;color:var(--mut);transition:.2s}
+.chip:hover{color:var(--tx)}
+.chip.on{border-color:var(--ac);color:var(--ac);background:color-mix(in srgb,var(--ac) 10%,transparent)}
+/* projects */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+.card{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:24px;text-align:left;transition:.25s;position:relative;overflow:hidden}
+.card:hover{border-color:var(--ac);transform:translateY(-4px)}
+.card .tag{font-size:11px;color:var(--ac);letter-spacing:.12em}
+.card h3{font:400 28px/1.15 'Instrument Serif',serif;margin:8px 0}
+.card p{color:var(--mut);font-size:13.5px}
+.more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}
+.card.open .more{grid-template-rows:1fr}
+.more>div{overflow:hidden}
+.tech{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0}
+.tech span{font-size:11px;border:1px solid var(--line);border-radius:4px;padding:2px 8px;color:var(--mut)}
+.links{display:flex;gap:10px;flex-wrap:wrap;padding-bottom:2px}
+.links a{font-size:12px;border-bottom:1px solid var(--ac);padding-bottom:1px}
+.hint{position:absolute;top:22px;right:22px;color:var(--mut);transition:.3s}
+.card.open .hint{transform:rotate(45deg);color:var(--ac)}
+/* experience */
+.tabs{display:grid;grid-template-columns:260px 1fr;gap:26px}
+.tl{display:flex;flex-direction:column;gap:8px}
+.tl button{text-align:left;padding:14px 16px;border:1px solid var(--line);border-radius:8px;color:var(--mut);transition:.2s}
+.tl button b{display:block;color:var(--tx);font-weight:500}
+.tl button small{font-size:11px}
+.tl button.on{border-color:var(--ac);background:var(--panel)}
+.pane{border:1px solid var(--line);border-radius:10px;padding:28px;background:var(--panel);min-height:230px}
+.pane h3{font:400 30px 'Instrument Serif',serif}
+.pane ul{margin-top:14px;padding-left:0;list-style:none}
+.pane li{padding:7px 0 7px 24px;position:relative;color:var(--mut)}
+.pane li::before{content:">";position:absolute;left:0;color:var(--ac)}
+/* skills */
+.search{width:100%;max-width:360px;background:var(--panel);border:1px solid var(--line);border-radius:99px;padding:10px 18px;color:var(--tx);font:inherit;margin-bottom:18px}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.sk{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:10px 16px;font-size:13px;transition:.2s}
+.sk:hover{border-color:var(--ac);color:var(--ac);transform:translateY(-3px)}
+.sk.hide{display:none}
+.none{color:var(--mut);display:none}
+/* about */
+.two{display:grid;grid-template-columns:1.1fr 1fr;gap:30px}
+.box{border:1px solid var(--line);border-radius:10px;padding:26px;background:var(--panel)}
+.box h3{font:400 28px 'Instrument Serif',serif;margin-bottom:12px}
+.edu{border-left:1px solid var(--line);padding-left:18px;margin-left:5px;position:relative}
+.edu div{position:relative;padding-bottom:18px}
+.edu div::before{content:"";position:absolute;left:-23px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--ac)}
+.edu b{font-weight:500}.edu small{display:block;color:var(--mut)}
+.list{list-style:none;padding:0}
+.list li{padding:6px 0 6px 22px;position:relative;color:var(--mut);font-size:13.5px}
+.list li::before{content:"✓";position:absolute;left:0;color:var(--ac)}
+/* contact */
+.ct{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.cp{display:flex;justify-content:space-between;gap:12px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:18px 20px;background:var(--panel);text-align:left;width:100%;transition:.2s}
+.cp:hover{border-color:var(--ac)}
+.cp small{display:block;color:var(--mut);font-size:11px}
+.cp span.v{word-break:break-all}
+.cp em{font-style:normal;font-size:11px;color:var(--ac)}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mut);font-size:12px;text-align:center}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,40px);background:var(--ac);color:#04130e;padding:10px 20px;border-radius:99px;font-size:13px;opacity:0;transition:.3s;z-index:99}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (max-width:820px){.tabs,.two{grid-template-columns:1fr}.tl{flex-direction:row;overflow-x:auto}.tl button{min-width:210px}.tools .op{display:none}nav{padding-left:14px;padding-right:14px}.frame{padding:18px}}
+@media print{nav,canvas,.cta,.toast,.chips,.search{display:none!important}body{background:#fff;color:#000}.rv{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+</style>
 </head>
 <body>
+<nav>
+  <a href="#intro" class="logo" aria-label="Home">vs</a>
+  <div class="pill" id="pill">
+    <a href="#intro" class="on">Intro</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </div>
+  <div class="tools"><span class="op"><i class="dot"></i>Open to opportunities</span><button class="tbtn" id="theme" aria-label="Toggle theme">◐</button></div>
+</nav>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">My Self V</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#self">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
+<header class="hero" id="intro">
+  <div class="frame" id="frame">
+    <canvas id="net" aria-hidden="true"></canvas>
+    <div class="row"><span><i class="dot"></i>Building AI systems that ship</span><span>ML / RAG / FLASK / REACT</span></div>
+    <div class="mid">
+      <div class="role"><span id="typed"></span><i></i></div>
+      <h1><span class="a" id="n1">Vivek</span><span class="b" id="n2">Sapkale</span></h1>
+      <p class="lede">CS (AI &amp; ML) engineering student from Virar, Mumbai. I build full-stack apps and AI products, from CCTV surveillance with face detection to RAG-powered petition generators.</p>
+      <div class="cta"><a class="btn p" href="#projects">See projects</a><a class="btn" href="#contact">Get in touch</a><button class="btn" onclick="window.print()">Save resume as PDF</button></div>
     </div>
-  </nav>
-
-  <!-- Parallax Hero -->
-  <div class="parallax">
-    <div class="content">
-      <h1>Version System My Self V</h1>
-      <div class="typing-text" id="typingText"></div>
+    <div class="stats">
+      <div><b data-n="9.0" data-d="1">0</b><small>CGPA</small></div>
+      <div><b data-n="7">0</b><small>Projects</small></div>
+      <div><b data-n="2">0</b><small>Internships</small></div>
+      <div><b data-n="20">0</b><small>Skills</small></div>
     </div>
   </div>
+</header>
 
-  <!-- Self Section (kept same, just refined) -->
-  <section id="self" class="container my-5">
-    <div class="card self-card">
-      <div class="circle-image mx-auto mb-3">
-        <img src="me.jpg" alt="Profile">
-      </div>
-      <h5 class="card-title text-primary">Vivek Sapkale</h5>
-      <p>Hello! I’m Vivek from Mumbai (Virar). I am pursuing my B.E. in Computer Science with specialization in AI/ML. I love coding, gaming, cooking, and exploring creativity. I’m passionate about learning and sharing my journey.</p>
-      <a href="test.html" class="btn-custom">Know More Click Here To See My Resume</a>
-       <!-- Iframe Section -->
-    <div class="iframe-container" style="width:100%; height:300px; margin-top:15px; border-radius:10px; overflow:hidden;">
-      <iframe src="test.html" style="width:100%; height:100%; border:none;"></iframe>
-    </div>
-    </div>
-  </section>
+<main class="wrap">
+<section id="projects" class="rv">
+  <h2>Projects</h2>
+  <p class="sub">Select a card to see the stack and open the live version or source.</p>
+  <div class="chips" id="pf"></div>
+  <div class="grid" id="pg"></div>
+</section>
 
-  <!-- Project Showcase -->
- <section id="projects" class="container my-5">
-  <h2 class="text-center text-info mb-4">🚀 Project Showcase</h2>
-  <div class="row g-4">
+<section id="experience" class="rv">
+  <h2>Experience</h2>
+  <p class="sub">Internships and recognition, newest first.</p>
+  <div class="tabs"><div class="tl" id="tl" role="tablist"></div><div class="pane" id="pane" role="tabpanel"></div></div>
+</section>
 
-    <!-- Event Organization Website -->
-    <div class="col-md-6">
-      <div class="glass-card h-100">
-        <img src="eo.png" class="img-fluid rounded mb-3" alt="Event Organization Website">
-        <h5>Website Project</h5>
-        <p>
-          This website is an event organization platform. The front end is developed using 
-          <b>HTML, CSS, and JavaScript</b>. For the back end, we utilize <b>PHP + SQL</b>. 
-          It facilitates user login and event booking, ensuring a smooth experience.
-        </p>
-        <a href="https://viveksapkale22.github.io/Web_project/" target="_blank" class="btn-custom me-2">🌐 GitHub Host</a>
-        <a href="https://OEO-vivek22.free.nf" target="_blank" class="btn-custom">🚀 InfinityFree</a>
-      </div>
-    </div>
+<section id="skills" class="rv">
+  <h2>Skills</h2>
+  <p class="sub">Filter by area or search a tool.</p>
+  <div class="chips" id="sf"></div>
+  <input class="search" id="ss" placeholder="Search skills, e.g. react" aria-label="Search skills">
+  <div class="skills" id="sg"></div>
+  <p class="none" id="sn">No skill matches that search.</p>
+</section>
 
-    <!-- Python Project -->
-    <div class="col-md-6">
-      <div class="glass-card h-100">
-        <img src="py.png" class="img-fluid rounded mb-3" alt="Python Project">
-        <h5>Python Project</h5>
-        <p>
-          Focused on <b>Python fundamentals, ML basics, and mini-projects</b>. 
-          Covers libraries like <b>Pandas & Scikit-learn</b>, exploring 
-          <code>train_test_split</code>, <code>linear_model</code>, and <code>metrics</code>.
-        </p>
-        <a href="https://github.com/Viveksapkale22/python_projects" target="_blank" class="btn-custom me-2">💻 GitHub</a>
-        <a href="https://colab.research.google.com/drive/1Uo9UQWLV2LjjycaaLr_WnES2nLKEZAO6?usp=sharing" target="_blank" class="btn-custom">📘 Colab</a>
+<section id="about" class="rv">
+  <h2>About</h2>
+  <p class="sub">AI &amp; ML–focused engineering student skilled in Python, Flask, data analytics and full-stack development. I love coding, gaming, cooking and exploring creativity, and I’m seeking roles that deepen my technical skills and support long-term growth.</p>
+  <div class="two">
+    <div class="box"><h3>Education</h3>
+      <div class="edu">
+        <div><b>Viva Institute of Technology</b><small>B.E. CS AI &amp; ML · CGPA 9.0 · 2022 – 2026</small></div>
+        <div><b>N.G. Vartak College, Virar</b><small>HSC · 86% · 2020 – 2021</small></div>
+        <div><b>A.V.S. Vidhya Mandir School</b><small>SSC · 77% · 2018 – 2019</small></div>
       </div>
     </div>
-
-    <!-- HTML CSS JS -->
-    <div class="col-md-6">
-      <div class="glass-card h-100">
-        <img src="hcj.png" class="img-fluid rounded mb-3" alt="HTML CSS JS Project">
-        <h5>HTML - CSS - JavaScript</h5>
-        <p>
-          A beginner-friendly project covering the basics of 
-          <b>HTML, CSS, and JavaScript</b>. Includes examples and 
-          explanations to help students understand front-end development.
-        </p>
-        <a href="https://viveksapkale22.github.io/edu_coding_languages-/" target="_blank" class="btn-custom">🌐 GitHub Host</a>
-      </div>
+    <div style="display:grid;gap:30px">
+      <div class="box"><h3>Certificates</h3><ul class="list">
+        <li>Infosys Data Analysis Certificate</li><li>Artificial Intelligence by IBM</li><li>MongoDB Basics by MongoDB</li><li>Branding Catalysts: Web/AI Development and LLM Backend</li><li>YBI Foundation: Machine Learning &amp; Data Analysis</li></ul></div>
     </div>
-
-    <!-- Emulator Game Store -->
-    <div class="col-md-6">
-      <div class="glass-card h-100">
-        <img src="emu.png" class="img-fluid rounded mb-3" alt="Game Store Project">
-        <h5>Version Store Project</h5>
-        <p>
-          A video game store website featuring classic emulator-based games. 
-          Users can download emulators and games for free, enjoying a nostalgic gaming experience.
-        </p>
-        <a href="https://viveksapkale22.github.io/emu_gamestore_project/" target="_blank" class="btn-custom me-2">🎮 GitHub</a>
-        <a href="https://videogame-version-game.w3spaces.com" target="_blank" class="btn-custom">🚀 W3Space</a>
-      </div>
-    </div>
-
   </div>
 </section>
 
+<section id="contact" class="rv">
+  <h2>Contact</h2>
+  <p class="sub">Select any card to copy it. Based in Virar East, Mumbai.</p>
+  <div class="ct" id="ct"></div>
+</section>
+</main>
 
-  <!-- Contact -->
-  <section id="contact" class="container my-5">
-    <h2 class="text-center text-info mb-4">📩 Contact Me</h2>
-    <div class="glass-card">
-      <p><b>Email:</b> vivekspkale0022@gmail.com</p>
-      <p><b>Phone:</b> +91 9136822022</p>
-      <p><b>Location:</b> Virar East, Mumbai</p>
-    </div>
-  </section>
+<footer>© 2025 Vivek D. Sapkale · Designed and built by Vivek</footer>
+<div class="toast" id="toast" role="status"></div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 My Self V | Designed by Vivek</p>
-    <div>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
-    </div>
-  </footer>
+<script>
+const $=s=>document.querySelector(s);
+const projects=[
+ {t:"CCTV Surveillance System",c:"AI/ML",d:"AI-based surveillance system using Flask and a transfer learning model with face and gender detection plus restricted-area monitoring. Won 3rd prize in a poster competition.",s:["Flask","Transfer Learning","OpenCV","Python"],l:[["GitHub","https://github.com/Viveksapkale22/Major-Project"]]},
+ {t:"Online Event Organization",c:"Web",d:"Event-management platform with user login, event creation, booking, ticketing and admin control. Front end in HTML, CSS and JavaScript; back end in PHP and SQL.",s:["HTML","CSS","JavaScript","PHP","MySQL"],l:[["GitHub Host","https://viveksapkale22.github.io/Web_project/"],["InfinityFree","https://OEO-vivek22.free.nf"]]},
+ {t:"Temple Application",c:"Web",d:"Responsive React.js front end with temple information, activity updates and basic statistical calculations.",s:["React.js","Vercel","CI/CD"],l:[["Live demo","https://templeapp-weld.vercel.app/"]]},
+ {t:"Kaafi Jewellery Website",c:"Web",d:"E-commerce build in React.js with product listing, cart and order management, backed by Node.js.",s:["React.js","Node.js","CI/CD"],l:[["GitHub","https://github.com/Viveksapkale22/kaafi_jewellery_website"]]},
+ {t:"Python & ML Projects",c:"AI/ML",d:"Python fundamentals, ML basics and mini-projects using Pandas and Scikit-learn, exploring train_test_split, linear_model and metrics.",s:["Python","Pandas","Scikit-learn"],l:[["GitHub","https://github.com/Viveksapkale22/python_projects"],["Colab","https://colab.research.google.com/drive/1Uo9UQWLV2LjjycaaLr_WnES2nLKEZAO6?usp=sharing"]]},
+ {t:"HTML · CSS · JavaScript Guide",c:"Learning",d:"A beginner-friendly project covering front-end basics with examples and explanations to help students learn web development.",s:["HTML","CSS","JavaScript"],l:[["GitHub Host","https://viveksapkale22.github.io/edu_coding_languages-/"]]},
+ {t:"Version Store (Emulator Game Store)",c:"Web",d:"A video game store website with classic emulator-based games. Users can download emulators and games for free for a nostalgic gaming experience.",s:["HTML","CSS","JavaScript"],l:[["GitHub","https://viveksapkale22.github.io/emu_gamestore_project/"],["W3Spaces","https://videogame-version-game.w3spaces.com"]]}
+];
+const jobs=[
+ {k:"Branding Catalysts",y:"2025",r:"Web/AI Development and LLM Backend",p:["Worked on UI design and CI/CD pipelines for the Kaafi Jewellery and Temple projects","Developed and integrated a RAG architecture on GPU for a Petition Generator","Completed 2 projects with React.js and Node.js backend integration"]},
+ {k:"YBI Foundation",y:"2023 – 2024",r:"Data Analysis and Machine Learning",p:["Assisted in predictive analytics models and ML development","Built regression and classification models","Strengthened knowledge of data statistics and management"]},
+ {k:"Achievements",y:"Awards & events",r:"Competitions and leadership",p:["3rd Prize, poster making on CCTV Surveillance System","3rd Prize, PPT presentation on Biometrics of BIS","Selected for Internal Smart India Hackathon (SIH), Remote Education project","Presented at NCRENB paper presentation","Student editor and team lead for Event Organizer and AI-based CCTV system"]}
+];
+const skills={"AI / ML":["Python","Machine Learning","Deep Learning","RAG","TensorFlow","Scikit-learn"],"Backend & Data":["Flask","Node.js","SQL","MongoDB","Data Analysis","Power BI"],"Frontend":["React.js","JavaScript","HTML / CSS","Bootstrap"],"Languages & Tools":["Java","C / C++","Git/GitHub","CI/CD"]};
+const contacts=[["Email (college)","22901061vivek@viva-technology.org"],["Email (personal)","vivekspkale0022@gmail.com"],["Phone","+91-9309733381"],["Phone (alt)","+91 9136822022"],["LinkedIn","https://www.linkedin.com/in/vivek-sapkale-v22"],["GitHub","https://github.com/Viveksapkale22"],["Portfolio","https://viveksapkale22.github.io/My_Self/"],["Location","Virar East, Mumbai"]];
 
-  <!-- JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const texts = ["Hello, my friends!", "Welcome to my website.", "I would like to introduce myself.","Enjoy exploring!"];
-    let i = 0, j = 0, speed = 75;
-    function typeText() {
-      let el = document.getElementById("typingText");
-      if (j < texts[i].length) {
-        el.innerHTML += texts[i].charAt(j);
-        j++; setTimeout(typeText, speed);
-      } else {
-        setTimeout(deleteText, 1000);
-      }
-    }
-    function deleteText() {
-      let el = document.getElementById("typingText");
-      if (j > 0) {
-        el.innerHTML = texts[i].substring(0, j-1);
-        j--; setTimeout(deleteText, speed);
-      } else {
-        i = (i+1) % texts.length;
-        setTimeout(typeText, 500);
-      }
-    }
-    document.addEventListener("DOMContentLoaded", typeText);
-  </script>
+function chips(el,items,cb){el.innerHTML="";items.forEach((n,i)=>{const b=document.createElement("button");b.className="chip"+(i?"":" on");b.textContent=n;b.onclick=()=>{el.querySelectorAll(".chip").forEach(x=>x.classList.remove("on"));b.classList.add("on");cb(n)};el.appendChild(b)})}
+/* projects */
+function drawP(f){const g=$("#pg");g.innerHTML="";projects.filter(p=>f==="All"||p.c===f).forEach(p=>{const c=document.createElement("div");c.className="card";c.tabIndex=0;c.setAttribute("role","button");
+ c.innerHTML=`<span class="hint">+</span><span class="tag"></span><h3></h3><p></p><div class="more"><div><div class="tech"></div><div class="links"></div></div></div>`;
+ c.querySelector(".tag").textContent=p.c;c.querySelector("h3").textContent=p.t;c.querySelector("p").textContent=p.d;
+ p.s.forEach(s=>{const e=document.createElement("span");e.textContent=s;c.querySelector(".tech").appendChild(e)});
+ p.l.forEach(([n,u])=>{const a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener";a.textContent=n+" ↗";a.onclick=e=>e.stopPropagation();c.querySelector(".links").appendChild(a)});
+ const tg=()=>c.classList.toggle("open");c.onclick=tg;c.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();tg()}};g.appendChild(c)})}
+chips($("#pf"),["All","AI/ML","Web","Learning"],drawP);drawP("All");
+/* experience */
+const tl=$("#tl");jobs.forEach((j,i)=>{const b=document.createElement("button");b.setAttribute("role","tab");b.innerHTML="<b></b><small></small>";b.firstChild.textContent=j.k;b.lastChild.textContent=j.y;b.onclick=()=>showJ(i);tl.appendChild(b)});
+function showJ(i){[...tl.children].forEach((b,k)=>b.classList.toggle("on",k===i));const j=jobs[i],p=$("#pane");p.innerHTML="<h3></h3><small style='color:var(--ac)'></small><ul></ul>";p.querySelector("h3").textContent=j.k;p.querySelector("small").textContent=j.r;j.p.forEach(x=>{const l=document.createElement("li");l.textContent=x;p.querySelector("ul").appendChild(l)})}
+showJ(0);
+/* skills */
+let sc="All";function drawS(){const q=$("#ss").value.trim().toLowerCase();let n=0;document.querySelectorAll(".sk").forEach(s=>{const ok=(sc==="All"||s.dataset.g===sc)&&s.textContent.toLowerCase().includes(q);s.classList.toggle("hide",!ok);if(ok)n++});$("#sn").style.display=n?"none":"block"}
+Object.entries(skills).forEach(([g,a])=>a.forEach(s=>{const e=document.createElement("span");e.className="sk";e.dataset.g=g;e.textContent=s;$("#sg").appendChild(e)}));
+chips($("#sf"),["All",...Object.keys(skills)],n=>{sc=n;drawS()});$("#ss").oninput=drawS;
+/* contact */
+const toast=$("#toast");let tt;function say(m){toast.textContent=m;toast.classList.add("show");clearTimeout(tt);tt=setTimeout(()=>toast.classList.remove("show"),1800)}
+contacts.forEach(([k,v])=>{const b=document.createElement("button");b.className="cp";b.innerHTML="<div><small></small><span class='v'></span></div><em>Copy</em>";b.querySelector("small").textContent=k;b.querySelector(".v").textContent=v;
+ b.onclick=async()=>{try{await navigator.clipboard.writeText(v);say("Copied "+k)}catch(e){say("Select and copy: "+v)}};$("#ct").appendChild(b)});
+/* typing */
+const roles=["AI/ML DEVELOPER & CURIOUS HUMAN","FULL-STACK BUILDER","RAG & LLM BACKEND ENGINEER","GAMER, COOK, LIFELONG LEARNER"];let ri=0,ci=0,del=false;
+function type(){const t=roles[ri],el=$("#typed");el.textContent=t.slice(0,ci);if(!del&&ci<t.length){ci++;setTimeout(type,70)}else if(!del){del=true;setTimeout(type,1400)}else if(ci>0){ci--;setTimeout(type,30)}else{del=false;ri=(ri+1)%roles.length;setTimeout(type,300)}}
+type();
+/* counters */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);const el=e.target,n=+el.dataset.n,d=el.dataset.d?1:0;let s=null;const st=t=>{s=s||t;const p=Math.min((t-s)/1200,1);el.textContent=(n*p).toFixed(d);if(p<1)requestAnimationFrame(st)};requestAnimationFrame(st)}),{threshold:.6});
+document.querySelectorAll("[data-n]").forEach(e=>io.observe(e));
+/* reveal + scrollspy */
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("in")}),{threshold:.08});document.querySelectorAll(".rv").forEach(e=>ro.observe(e));
+const links=[...document.querySelectorAll("#pill a")];
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>{const on=a.getAttribute("href")==="#"+e.target.id;a.classList.toggle("on",on);if(on)a.scrollIntoView({inline:"center",block:"nearest"})})}}),{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("header,section").forEach(s=>so.observe(s));
+/* theme */
+$("#theme").onclick=()=>{const r=document.documentElement;r.dataset.theme=r.dataset.theme==="dark"?"light":"dark";dark=r.dataset.theme==="dark"};
+let dark=true;
+/* particle network */
+const cv=$("#net"),cx=cv.getContext("2d"),fr=$("#frame");let W,H,pts=[],m={x:-999,y:-999};
+function size(){const r=fr.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);const n=Math.round(Math.min(90,W*H/14000));pts=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:1.5+Math.random()*2.5}))}
+size();addEventListener("resize",size);
+fr.addEventListener("pointermove",e=>{const r=fr.getBoundingClientRect();m.x=e.clientX-r.left;m.y=e.clientY-r.top;const dx=(m.x/W-.5)*14;$("#n1").style.transform=`translateX(${dx}px)`;$("#n2").style.transform=`translateX(${-dx}px)`});
+fr.addEventListener("pointerleave",()=>{m.x=m.y=-999;$("#n1").style.transform=$("#n2").style.transform=""});
+const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+function frame(){cx.clearRect(0,0,W,H);const col=getComputedStyle(document.documentElement).getPropertyValue("--ac").trim();
+ for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;const dx=p.x-m.x,dy=p.y-m.y,d=Math.hypot(dx,dy);if(d<130&&d>0){p.x+=dx/d*1.4;p.y+=dy/d*1.4}}
+ for(let i=0;i<pts.length;i++){const a=pts[i];for(let j=i+1;j<pts.length;j++){const b=pts[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<130){cx.globalAlpha=(1-d/130)*.35;cx.strokeStyle=col;cx.lineWidth=.7;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}
+  const md=Math.hypot(a.x-m.x,a.y-m.y);if(md<170){cx.globalAlpha=(1-md/170)*.7;cx.strokeStyle=col;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(m.x,m.y);cx.stroke()}
+  cx.globalAlpha=.55;cx.fillStyle=col;cx.beginPath();cx.arc(a.x,a.y,a.r,0,7);cx.fill()}
+ cx.globalAlpha=1;if(!reduce)requestAnimationFrame(frame)}
+frame();
+</script>
 </body>
 </html>
